@@ -1,0 +1,88 @@
+#flow-saver-toast-container {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999999;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	pointer-events: none;
+}
+
+.flow-saver-toast {
+	min-width: 300px;
+	max-width: 450px;
+	background: #ffffff;
+	border: 1px solid #dddbda;
+	border-left: 4px solid #e2873c;
+	border-radius: 4px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+	color: #080707;
+	padding: 16px;
+	font-family:
+		"Salesforce Sans",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		sans-serif;
+	font-size: 13px;
+	line-height: 1.5;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 12px;
+	pointer-events: auto;
+	opacity: 1;
+	transform: translateY(0);
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+}
+
+.flow-saver-toast-content {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+.flow-saver-toast-icon {
+	font-size: 16px;
+	line-height: 1;
+}
+
+.flow-saver-toast-text {
+	font-weight: 500;
+}
+
+.flow-saver-toast-close {
+	background: none;
+	border: none;
+	color: #706e6b;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 0 4px;
+	line-height: 1;
+	transition: color 0.2s ease;
+}
+
+.flow-saver-toast-close:hover {
+	color: #080707;
+}
+
+.flow-saver-toast-fadeout {
+	opacity: 0;
+	transform: translateY(-20px);
+}
+
+@keyframes flow-saver-glow {
+	0% {
+		box-shadow: 0 0 12px rgba(46, 204, 113, 0.9);
+	}
+	100% {
+		box-shadow: none;
+	}
+}
+.flow-saver-pulse {
+	animation: flow-saver-glow 0.8s ease-out;
+}

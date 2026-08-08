@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img id="status-icon" src="icons/icon128.png" alt="Icon">
+            <h2>Flow Saver</h2>
+        </div>
+
+        <div class="card">
+            <div class="row">
+                <span class="label">Auto-Save Status</span>
+                <label class="switch">
+                    <input type="checkbox" id="auto-save-toggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="row">
+                <label for="save-interval" class="label">Save Delay</label>
+                <div class="input-group">
+                    <input type="number" id="save-interval" min="1" max="60" value="3">
+                    <span class="unit">sec</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-box">
+            <div class="status-label-group">
+                <span id="status-dot" class="status-dot"></span>
+                <span>Last Auto-Save:</span>
+            </div>
+            <span id="last-saved-time">Never</span>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
