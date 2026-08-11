@@ -2,7 +2,7 @@
 	"use strict";
 
 	// Set to false before publishing to the Web Store
-	const DEBUG = true;
+	const DEBUG = false;
 
 	const log = {
 		info: (...args) => {
