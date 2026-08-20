@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Flow Auto-Saver | Effortless Flow Builder Automation</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A lightweight Chrome Extension that automatically saves Salesforce Flows as you work. Prevents work loss with smart save rules and editor detection.">
+    <meta name="keywords" content="Salesforce Flow Auto-Saver, Salesforce Flow Builder, Salesforce Flow Auto-Save, Chrome Extension, Salesforce Automation, Flow Builder Productivity, Auto Save Salesforce Flows, Salesforce Admin Tools, Salesforce Developer Tools">
+    <meta name="author" content="Tejas">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Salesforce Flow Auto-Saver | Effortless Flow Builder Automation">
+    <meta property="og:description" content="A lightweight Chrome Extension that automatically saves Salesforce Flows as you work. Prevents work loss with smart save rules and editor detection.">
+    <meta property="og:image" content="hero.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Salesforce Flow Auto-Saver | Effortless Flow Builder Automation">
+    <meta property="twitter:description" content="A lightweight Chrome Extension that automatically saves Salesforce Flows as you work. Prevents work loss with smart save rules and editor detection.">
+    <meta property="twitter:image" content="hero.png">
+    
+    <!-- Icons & Styling -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesforce Flow Auto-Saver",
+      "operatingSystem": "ChromeOS, Windows, macOS, Linux",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      },
+      "description": "Automatically saves Salesforce Flow when changes are detected, featuring smart state logic and configuration panel detection."
+    }
+    </script>
+</head>
+<body>
+    <!-- Premium Header -->
+    <header class="navbar" id="main-nav">
+        <div class="container navbar-container">
+            <a href="#" class="logo" id="nav-logo">
+                <img src="icons/icon48.png" alt="Salesforce Flow Auto-Saver Logo" class="logo-img" id="nav-logo-img">
+                <span class="logo-text">Flow Auto-Saver</span>
+            </a>
+            <nav class="nav-menu" id="nav-links">
+                <a href="#features" class="nav-link" id="link-features">Features</a>
+                <a href="#rules-simulator" class="nav-link" id="link-rules">How it Works</a>
+                <a href="#roadmap" class="nav-link" id="link-roadmap">Roadmap</a>
+                <a href="#privacy" class="nav-link" id="link-privacy">Privacy</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="https://github.com/tejastg007/salesforce-flow-autosave" target="_blank" class="btn btn-secondary btn-sm" id="btn-header-github">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge" id="badge-version">v1.0.1 Stable</span>
+                    <h1 class="hero-title">Automate Your Saves, <br><span class="text-gradient">Preserve Your Flow</span></h1>
+                    <p class="hero-subtitle">A lightweight, smart Chrome Extension (Manifest V3) designed to auto-save Salesforce Flows. Never lose your building progress again.</p>
+                    <div class="hero-actions">
+                        <a href="https://chromewebstore.google.com/detail/salesforce-flow-auto-save/kofmhnjlcmpgfbpbmdigoppmhpbdpnbf" target="_blank" class="btn btn-primary" id="btn-hero-download">
+                            <span>Get Extension</span>
+                        </a>
+                        <a href="#rules-simulator" class="btn btn-outline" id="btn-hero-learn">See How It Works</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="hero.png" alt="Salesforce Flow Auto-Saver Showcase Dashboard" class="hero-image" id="img-hero-showcase">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Built with Developers & Admins in Mind</h2>
+                    <p class="section-subtitle">Smart auto-saving that respects Salesforce Flow Builder states, modulations, and complex configuration modes.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <!-- Feature Card 1 -->
+                    <div class="feature-card" id="card-feature-autosave">
+                        <div class="feature-icon-wrapper purple-glow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                        </div>
+                        <h3>Smart Auto-Saving</h3>
+                        <p>Periodically checks the status of the Salesforce Flow Builder save button and automatically triggers a save whenever changes are detected.</p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="feature-card" id="card-feature-deferral">
+                        <div class="feature-icon-wrapper blue-glow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h3>Smart Save Deferral</h3>
+                        <p>Automatically detects open side configuration panels or layout edit modals to prevent Salesforce from assigning default API names during editing.</p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="feature-card" id="card-feature-warn">
+                        <div class="feature-icon-wrapper green-glow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </div>
+                        <h3>Active Version Protection</h3>
+                        <p>Identifies active flows and prompts you with clear desktop/browser toast notifications to save as a new version, rather than failing on write-protected versions.</p>
+                    </div>
+
+                    <!-- Feature Card 4 -->
+                    <div class="feature-card" id="card-feature-reload">
+                        <div class="feature-icon-wrapper orange-glow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+                        </div>
+                        <h3>Dev-Friendly Shortcut</h3>
+                        <p>Equipped with a built-in reload shortcut (<kbd>Ctrl + Shift + E</kbd>). Seamlessly reload the extension workspace inside your Chrome development instance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Simulator Section -->
+        <section class="simulator-section" id="rules-simulator">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Visual Save Rules Simulator</h2>
+                    <p class="section-subtitle">Select a Salesforce flow builder state below to test how our smart auto-save rules adapt dynamically to keep your flow safe.</p>
+                </div>
+
+                <div class="simulator-wrapper">
+                    <!-- Left: Control states -->
+                    <div class="simulator-states">
+                        <h3>Flow Builder States</h3>
+                        <div class="state-buttons-list">
+                            <button class="state-btn active" id="state-new-flow" data-state="new">
+                                <span class="state-indicator font-mono">1</span> New Flow & Modifications
+                            </button>
+                            <button class="state-btn" id="state-first-saved" data-state="saved">
+                                <span class="state-indicator font-mono">2</span> Saved First Time
+                            </button>
+                            <button class="state-btn" id="state-activated" data-state="activated">
+                                <span class="state-indicator font-mono">3</span> Flow Activated
+                            </button>
+                            <button class="state-btn" id="state-active-modified" data-state="active-modified">
+                                <span class="state-indicator font-mono">4</span> Changes on Active Flow
+                            </button>
+                            <button class="state-btn" id="state-new-version" data-state="new-version">
+                                <span class="state-indicator font-mono">5</span> New Version Created
+                            </button>
+                            <button class="state-btn" id="state-deactivated-modified" data-state="deactivated-modified">
+                                <span class="state-indicator font-mono">6</span> Deactivated & Modified
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Simulation Output Display -->
+                    <div class="simulator-display">
+                        <div class="display-header">
+                            <div class="window-controls">
+                                <span class="window-dot red"></span>
+                                <span class="window-dot yellow"></span>
+                                <span class="window-dot green"></span>
+                            </div>
+                            <div class="window-title font-mono">Salesforce Flow Builder DOM Sandbox</div>
+                        </div>
+                        
+                        <div class="display-body">
+                            <!-- Simulated Builder Buttons -->
+                            <div class="builder-buttons-mockup">
+                                <div class="builder-btn" id="mock-btn-save">Save</div>
+                                <div class="builder-btn" id="mock-btn-save-as">Save As</div>
+                                <div class="builder-btn" id="mock-btn-activate">Activate</div>
+                            </div>
+                            
+                            <!-- Extension Decision Action -->
+                            <div class="decision-box" id="mock-decision-box">
+                                <div class="decision-status-row">
+                                    <span class="decision-badge" id="mock-decision-badge">AUTO-SAVING ACTION</span>
+                                    <span class="decision-status font-mono" id="mock-decision-status">ENABLED</span>
+                                </div>
+                                <h4 id="mock-decision-title">Auto-Save Action Clicked!</h4>
+                                <p id="mock-decision-desc" class="decision-text">Standard auto-saving triggers. The extension clicks the Save button for you.</p>
+                            </div>
+
+                            <!-- Rules Explanation Details -->
+                            <div class="explanation-box">
+                                <span class="detail-label">Context Details</span>
+                                <p id="mock-explanation-text">A new flow is created, and the builder senses a change. The Save button is active, allowing automated trigger clicks to persist content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section class="roadmap-section" id="roadmap">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Development Roadmap</h2>
+                    <p class="section-subtitle">Track completed capabilities and our future pipeline for Salesforce Flow productivity tools.</p>
+                </div>
+
+                <div class="roadmap-wrapper">
+                    <div class="roadmap-timeline">
+                        <!-- Timeline Item 1 -->
+                        <div class="roadmap-item completed" id="roadmap-item-autosave">
+                            <div class="roadmap-dot">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <div class="roadmap-content">
+                                <span class="roadmap-status-badge">Released</span>
+                                <h3>Auto-Saving Flow Builder</h3>
+                                <p>Automated periodic evaluation of save triggers, background extension reloads, and state logic check blocks.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="roadmap-item" id="roadmap-item-darkmode">
+                            <div class="roadmap-dot"></div>
+                            <div class="roadmap-content">
+                                <span class="roadmap-status-badge pending">Planned</span>
+                                <h3>Dark Mode for Flows</h3>
+                                <p>Complete UI inject stylesheets to transform Salesforce Flow Builder canvas into a beautiful dark mode theme.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="roadmap-item" id="roadmap-item-search">
+                            <div class="roadmap-dot"></div>
+                            <div class="roadmap-content">
+                                <span class="roadmap-status-badge pending">Planned</span>
+                                <h3>Quick Resource & Element Search</h3>
+                                <p>Quick finder utilities (<kbd>Ctrl + K</kbd>) to search and zoom into flow elements, variables, templates, or resources.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 4 -->
+                        <div class="roadmap-item completed" id="roadmap-item-unused">
+                            <div class="roadmap-dot">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <div class="roadmap-content">
+                                <span class="roadmap-status-badge">Released</span>
+                                <h3>Unused Resource Highlighting</h3>
+                                <p>Natively supported by Salesforce in the Winter '27 release.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Section -->
+        <section class="privacy-section" id="privacy">
+            <div class="container">
+                <div class="privacy-card">
+                    <h2>Privacy-First Extension</h2>
+                    <p>Salesforce Flow Auto-Saver does not collect, store, or transmit any user data. All processing occurs locally on your machine within Chrome's isolated environment. No remote servers or tracking pixels are included.</p>
+                    <a href="https://github.com/tejastg007/salesforce-flow-autosave/blob/master/PRIVACY.md" target="_blank" class="btn btn-outline" id="btn-privacy-read">Read Full Privacy Policy</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="icons/icon32.png" alt="Salesforce Flow Auto-Saver Icon">
+                    <span>Flow Auto-Saver</span>
+                </a>
+                <p>Smart productivity tools for Salesforce Admins and Developers.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="https://github.com/tejastg007/salesforce-flow-autosave" target="_blank">GitHub Repository</a>
+                    <a href="https://github.com/tejastg007/salesforce-flow-autosave/blob/master/LICENSE" target="_blank">MIT License</a>
+                    <a href="https://github.com/tejastg007/salesforce-flow-autosave/blob/master/SAVE_RULES.md" target="_blank">Save Rules Specification</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Salesforce Flow Auto-Saver. Developed as an open-source productivity enhancement.</p>
+            <p class="disclaimer">Disclaimer: This extension is independent and is not affiliated with, sponsored by, or endorsed by Salesforce, Inc.</p>
+        </div>
+    </footer>
+
+    <!-- App JS logic -->
+    <script src="app.js"></script>
+</body>
+</html>

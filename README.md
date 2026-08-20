@@ -18,4 +18,4 @@ For details on the state machine, button interactions, and deferred save rules, 
 - [ ] Dark mode for flows
 - [ ] Easy search for flows
 - [ ] Advanced filters for flow search
-- [ ] Highlight unused variables/resources
+- [x] Highlight unused variables/resources (Salesforce Winter 27 release)
